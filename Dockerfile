@@ -9,13 +9,14 @@ RUN sudo apt update && \
     sudo apt install -y python3 python3-pip
 
 RUN python3 -m pip install --upgrade --user pip && \
-    python3 -m pip install --upgrade --user \
+    pip3 install --upgrade --user \
         virtualenv \
         mypy \
         pylint \
         pytest \
         bandit \
         tox \
-        flake8
+        flake8 \
+        autopep8
 
 # tbcp/python:latest
