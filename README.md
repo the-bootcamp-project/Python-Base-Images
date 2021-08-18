@@ -7,7 +7,7 @@
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/tbcp/python?style=for-the-badge)
 ![Docker Pulls](https://img.shields.io/docker/pulls/tbcp/python?style=for-the-badge)
 ![Docker Stars](https://img.shields.io/docker/stars/tbcp/python?style=for-the-badge)
-![Bootcamp Project: DataSourcing with Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
+![Bootcamp Project: Python Base Images](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
 </div>
 
 ## 👉 About 👈
@@ -56,4 +56,4 @@ Project Link: [https://gitlab.com/the-bootcamp-project/containers/python](https:
 
 ## 🏆 Acknowledgements 🏆
 
-Thanks for these awesome resources that were used during the development of the **Bootcamp Project: DataScience with Python in Docker**:
+Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Python Base Images**:

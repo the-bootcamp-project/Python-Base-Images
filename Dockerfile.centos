@@ -1,0 +1,10 @@
+FROM tbcp/centos
+
+USER bootcamp
+
+RUN sudo yum -y install \
+    python3
+
+RUN python3 -m pip install --upgrade --user pip
+
+# tbcp/python:centos
