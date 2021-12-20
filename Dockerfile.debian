@@ -6,8 +6,12 @@ USER bootcamp
 
 RUN sudo apt update && \
     sudo apt install -y --no-install-recommends apt-utils && \
-    sudo apt install -y python3 python3-pip
+    sudo apt install -y python3 python3-pip \
+    debhelper dh-python \
+    python3-venv python3-all
 
 RUN python3 -m pip install --upgrade --user pip
+
+RUN python3 -m pip install --user bandit pylint autopep8 mypy pytest pydocstyle stdeb twine
 
 # tbcp/python:debian
