@@ -12,6 +12,36 @@ RUN sudo apt update && \
 
 RUN python3 -m pip install --upgrade --user pip
 
-RUN python3 -m pip install --user bandit pylint autopep8 mypy pytest pydocstyle stdeb twine
+RUN python3 -m pip install --user \
+        autopep8  \
+        bandit  \
+        build  \
+        cryptography  \
+        entrypoints  \
+        gitdb  \
+        GitPython  \
+        idna  \
+        launchpadlib  \
+        lockfile  \
+        mypy  \
+        mypy-extensions  \
+        packaging  \
+        pycodestyle  \
+        pydocstyle  \
+        pylint  \
+        pytest  \
+        python-apt  \
+        python-debian  \
+        PyYAML  \
+        requests  \
+        requests-unixsocket  \
+        simplejson  \
+        smmap  \
+        stdeb  \
+        systemd-python  \
+        typing_extensions  \
+        ubuntu-advantage-tools  \
+        ubuntu-drivers-common  \
+        twine
 
 # tbcp/python:debian
