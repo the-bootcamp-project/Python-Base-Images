@@ -30,7 +30,6 @@ RUN python3 -m pip install --user \
         simplejson  \
         smmap  \
         stdeb  \
-        systemd-python  \
         typing_extensions  \
         twine
 
