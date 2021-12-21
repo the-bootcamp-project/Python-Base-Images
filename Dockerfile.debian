@@ -38,8 +38,6 @@ RUN python3 -m pip install --user \
         smmap  \
         stdeb  \
         typing_extensions  \
-        ubuntu-advantage-tools  \
-        ubuntu-drivers-common  \
         twine
 
 # tbcp/python:debian
