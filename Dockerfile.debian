@@ -10,7 +10,7 @@ RUN sudo apt update && \
     debhelper dh-python \
     python3-venv python3-all
 
-RUN python3 -m pip install --upgrade --user pip
+RUN python3 -m pip install --upgrade --user pip setuptools wheel
 
 RUN python3 -m pip install --user \
         autopep8  \
