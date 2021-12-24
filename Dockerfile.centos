@@ -34,4 +34,6 @@ RUN python3 -m pip install --user \
         typing_extensions  \
         twine
 
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+
 # tbcp/python:centos
