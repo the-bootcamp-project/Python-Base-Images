@@ -1,4 +1,4 @@
-FROM tbcp/centos
+FROM tbcp/alpine:latest
 
 USER bootcamp
 

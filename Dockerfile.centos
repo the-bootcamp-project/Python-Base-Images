@@ -1,4 +1,4 @@
-FROM tbcp/centos
+FROM tbcp/centos:latest
 
 USER bootcamp
 
