@@ -1,4 +1,4 @@
-FROM tbcp/debian:latest
+FROM tbcp/ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 

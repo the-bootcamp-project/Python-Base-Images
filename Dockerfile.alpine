@@ -1,0 +1,5 @@
+FROM tbcp/centos
+
+USER bootcamp
+
+RUN sudo apk add --update --no-cache python3 py3-pip

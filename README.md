@@ -28,13 +28,12 @@ SOFTWARE.
 <img src="https://img.shields.io/docker/v/tbcp/python?style=for-the-badge" />
 <img src="https://img.shields.io/docker/image-size/tbcp/python?style=for-the-badge" />
 <img src="https://img.shields.io/docker/pulls/tbcp/python?style=for-the-badge" />
-<img src="https://img.shields.io/docker/stars/tbcp/python?style=for-the-badge" />
 <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" />
 
 ## 🦄 About 🦄
 
-> Description
+> Provide daily fresh Docker Images with latest preinstalled Tools
 
 **Project Links**
 
@@ -45,18 +44,11 @@ SOFTWARE.
 
 **Minimum Viable Product**: *What is what we want?*
 
-- **What are the goals?**
-  - [ ] Goal #1
-  - [ ] Goal #2
-  - [ ] Goal #3
-- **Sense** *(Why do these goals exist?)*
-  - [ ] Explanation #1
-  - [ ] Explanation #2
-  - [ ] Explanation #3
-- **Purpose** *(What should be done with it?)*
-  - [ ] Use Case #1
-  - [ ] Use Case #2
-  - [ ] Use Case #3
+- [X] Install latest Tools
+- [X] Preinstalled Git and Curl
+- [X] Provide User as sudoer
+- [X] Provide daily Update routine
+- [X] Preinstalled Build Tools
 
 ## 🚀 Getting Started 🚀
 
@@ -64,24 +56,42 @@ _For more examples, please refer to the [Documentation][Repo_Docs]_
 
 ### 🤩 Usage 🤩
 
-**... as local Copy**
+... as local Copy
 
 ```bash
-docker pull tbcp/python
+docker pull tbcp/python:alpine
+# or
+docker pull tbcp/python:debian
+# or
+docker pull tbcp/python:ubuntu
+# or
+docker pull tbcp/python:centos
 ```
 
-**... as Base Image**
+... as Base Image
 
 ```dockerfile
-FROM tbcp/python
+FROM tbcp/python:alpine
+# or
+FROM tbcp/python:debian
+# or
+FROM tbcp/python:ubuntu
+# or
+FROM tbcp/python:centos
 
 USER bootcamp
 ```
 
-**... as GitLab-CI Image**
+... as GitLab-CI Image
 
 ```yml
-image: "tbcp/python"
+image: "tbcp/python:alpine"
+# or
+image: "tbcp/python:debian"
+# or
+image: "tbcp/python:ubuntu"
+# or
+image: "tbcp/python:centos"
 ```
 
 ## ⭐️ Features ⭐️

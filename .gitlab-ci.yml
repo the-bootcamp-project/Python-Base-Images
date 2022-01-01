@@ -1,6 +1,5 @@
 stages:
   - Building
-  - Deployment
 
 docker-build-debian:
   # Official docker image.
@@ -13,6 +12,20 @@ docker-build-debian:
   script:
     - docker build --pull -t "index.docker.io/tbcp/python:debian" -f ./Dockerfile.debian .
     - docker push "index.docker.io/tbcp/python:debian"
+  only:
+    - main
+
+docker-build-ubuntu:
+  # Official docker image.
+  image: docker:latest
+  stage: Building
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_DOCKERHUB_PASSWORD | docker login -u "$CI_DOCKERHUB_USER" --password-stdin $CI_DOCKERHUB_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/tbcp/python:ubuntu" -f ./Dockerfile.ubuntu .
+    - docker push "index.docker.io/tbcp/python:ubuntu"
   only:
     - main
 
@@ -30,11 +43,16 @@ docker-build-centos:
   only:
     - main
 
-pages:
-    stage: Deployment
-    script:
-        - mkdir ./public
-        - cp -r README.md public/ && cp -r USAGE.md public/
-    artifacts:
-        paths: [public]
-        expire_in: 1 mins
+docker-build-centos:
+  # Official docker image.
+  image: docker:latest
+  stage: Building
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_DOCKERHUB_PASSWORD | docker login -u "$CI_DOCKERHUB_USER" --password-stdin $CI_DOCKERHUB_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/tbcp/python:alpine" -f ./Dockerfile.alpine .
+    - docker push "index.docker.io/tbcp/python:alpine"
+  only:
+    - main

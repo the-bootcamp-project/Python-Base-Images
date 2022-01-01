@@ -3,37 +3,11 @@ FROM tbcp/centos
 USER bootcamp
 
 RUN sudo yum -y install \
-    gcc-c++ make \
-    python3 python3-pip
+    python3 \
+    python3-pip \
+    python3-venv \
+    python3-all
 
 RUN python3 -m pip install --upgrade --user pip setuptools wheel
 
-RUN python3 -m pip install --user \
-        autopep8  \
-        bandit  \
-        build  \
-        cryptography  \
-        entrypoints  \
-        gitdb  \
-        GitPython  \
-        idna  \
-        lockfile  \
-        mypy  \
-        mypy-extensions  \
-        packaging  \
-        pycodestyle  \
-        pydocstyle  \
-        pylint  \
-        pytest  \
-        PyYAML  \
-        requests  \
-        requests-unixsocket  \
-        simplejson  \
-        smmap  \
-        stdeb  \
-        typing_extensions  \
-        twine
-
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
-
-# tbcp/python:centos
+ENV PATH /home/bootcamp/.local/bin:/usr/local/bin/python3:/usr/local/bin/pip3:$PATH
